@@ -1,0 +1,16 @@
+<ul class="list-unstyled">
+ <li>
+    <div *ngFor="let course of coursesObservable | async">
+      <ngb-alert type="info" [dismissible]="false">
+        <h3>
+          <a href="{{course.url}}">{{course.title}}</a>
+        </h3>
+        <p>{{course.description}}</p>
+        <div>
+          <a href="{{course.url}}" class="btn btn-success" target="_blank">Go to course</a>
+        </div>
+    
+      </ngb-alert>
+    </div>
+ </li>
+</ul>
